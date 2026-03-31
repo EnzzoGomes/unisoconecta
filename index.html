@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conecta.uniso - Conectando Jovens ao Futuro</title>
+    <title>conecta.uniso - Domine as Habilidades do Futuro</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -31,9 +32,18 @@
         }
 
         /* Scrollbar personalizada */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
 
         .container {
             max-width: 1200px;
@@ -65,7 +75,9 @@
             gap: 10px;
         }
 
-        .logo span { color: var(--primary); }
+        .logo span {
+            color: var(--primary);
+        }
 
         .nav-links {
             display: flex;
@@ -81,7 +93,9 @@
             font-size: 0.95rem;
         }
 
-        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
         /* --- Hero Section --- */
         .hero {
@@ -120,8 +134,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 10px var(--primary-glow); }
-            50% { box-shadow: 0 0 20px var(--primary); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px var(--primary-glow);
+            }
+
+            50% {
+                box-shadow: 0 0 20px var(--primary);
+            }
         }
 
         h1 {
@@ -210,7 +231,7 @@
             display: block;
         }
 
-        .section-header h2 { 
+        .section-header h2 {
             font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 20px;
             font-weight: 800;
@@ -289,8 +310,8 @@
         /* --- CTA Section --- */
         .cta-section {
             padding: 100px 40px;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -315,7 +336,7 @@
             z-index: 1;
         }
 
-        .cta-box h2 { 
+        .cta-box h2 {
             font-size: clamp(2.2rem, 6vw, 3.5rem);
             margin-bottom: 25px;
             font-weight: 800;
@@ -378,38 +399,63 @@
 
         /* --- Responsividade --- */
         @media (max-width: 768px) {
-            nav { padding: 0 20px; }
-            .nav-links { display: none; }
-            .hero { padding: 80px 0 60px; }
-            h1 { font-size: 2.5rem; }
-            .grid-features { grid-template-columns: 1fr; }
-            .stats { grid-template-columns: 1fr; gap: 30px; }
-            .cta-section { margin: 0 10px 50px; padding: 60px 20px; }
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .grid-features {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-section {
+                margin: 0 10px 50px;
+                padding: 60px 20px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav>
         <div class="logo">conecta<span>.uniso</span></div>
         <div class="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#cursos">Cursos</a>
-            <a href="#impacto">Impacto</a>
-            <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 12px 28px;">Acessar Plataforma</a>
+            <a href="#sobre">Diferenciais</a>
+            <a href="#cursos">Trilhas</a>
+            <a href="#impacto">O Impacto</a>
+            <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 12px 28px;">Acessar
+                Portal</a>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <span class="badge">🚀 O Futuro é agora</span>
-            <h1>Conectando Jovens<br>ao Futuro Digital</h1>
-            <p>Capacitação gratuita em tecnologia, inteligência artificial e ferramentas profissionais para a nova geração de talentos.</p>
+            <span class="badge">Prepare-se para 2026</span>
+            <h1>Sua Carreira Começa na <br>Nova Era Digital</h1>
+            <p>Capacitação gratuita de alto nível em tecnologia, inteligência artificial e ferramentas profissionais
+                para a nova geração de talentos da Uniso.</p>
             <div class="hero-buttons">
-                <a href="https://site-letramento.vercel.app/" class="btn btn-primary">Começar Agora Grátis</a>
-                <a href="#sobre" class="btn btn-secondary">Conhecer o Projeto</a>
+                <a href="https://site-letramento.vercel.app/" class="btn btn-primary">Iniciar Minha Jornada Grátis</a>
+                <a href="#sobre" class="btn btn-secondary">Explorar Benefícios</a>
             </div>
         </div>
     </section>
@@ -418,26 +464,30 @@
     <section class="features" id="cursos">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Por que o conecta.uniso?</span>
-                <h2>Transformação através da Tecnologia</h2>
-                <p>Oferecemos uma trilha de aprendizado pensada para o mercado real, com conteúdos práticos e certificação reconhecida.</p>
+                <span class="section-label">Sua Evolução Profissional</span>
+                <h2>Domine o que as empresas buscam</h2>
+                <p>Educação prática e focada no mercado real, com módulos desenvolvidos para transformar curiosidade em
+                    competência profissional.</p>
             </div>
 
             <div class="grid-features">
                 <div class="feature-card">
-                    <div class="icon-box">💻</div>
-                    <h3>Pacote Office Completo</h3>
-                    <p>Domine Word e Excel do básico ao avançado. Aprenda as ferramentas essenciais para qualquer ambiente profissional moderno.</p>
+                    <div class="icon-box"></div>
+                    <h3>Produtividade Corporativa</h3>
+                    <p>Domine o Word e Excel Avançado. Vá além do básico e aprenda a criar soluções inteligentes e
+                        documentos profissionais de alto impacto.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box">🤖</div>
-                    <h3>Inteligência Artificial</h3>
-                    <p>Aprenda a utilizar IA para aumentar sua produtividade e se destacar na era da tecnologia generativa e automação.</p>
+                    <div class="icon-box"></div>
+                    <h3>Ecossistema de IA</h3>
+                    <p>Potencialize seu trabalho com as ferramentas mais avançadas de Inteligência Artificial para
+                        ganhar agilidade, criatividade e produtividade.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box">📜</div>
-                    <h3>Certificação Uniso</h3>
-                    <p>Conclua seus cursos e receba certificados oficiais que comprovam suas habilidades e enriquecem seu currículo.</p>
+                    <div class="icon-box"></div>
+                    <h3>Certificação Universitária</h3>
+                    <p>Garanta seu certificado emitido pela Uniso. Uma validação de peso para o seu currículo e um passo
+                        decisivo rumo ao sucesso profissional.</p>
                 </div>
             </div>
         </div>
@@ -449,19 +499,19 @@
             <div class="stats">
                 <div class="stat-item">
                     <div class="stat-number">100%</div>
-                    <div class="stat-label">Gratuito</div>
+                    <div class="stat-label">Investimento Zero</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">3</div>
-                    <div class="stat-label">Cursos Disponíveis</div>
+                    <div class="stat-label">Trilhas Formativas</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">24/7</div>
-                    <div class="stat-label">Acesso Ilimitado</div>
+                    <div class="stat-label">Acesso Irrestrito</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">∞</div>
-                    <div class="stat-label">Potencial</div>
+                    <div class="stat-label">Sua Evolução</div>
                 </div>
             </div>
         </div>
@@ -471,10 +521,13 @@
     <section class="cta-section" id="sobre">
         <div class="container">
             <div class="cta-box">
-                <h2>Pronto para dar o próximo passo?</h2>
-                <p>Junte-se a centenas de jovens que já estão construindo suas carreiras através do conecta.uniso. Comece hoje mesmo, totalmente grátis.</p>
-                <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">Acessar Plataforma Agora</a>
-                <p style="font-size: 0.85rem; margin-top: 20px; color: var(--text-muted);">✅ Sem custos ocultos • ✅ Certificado incluído • ✅ Suporte completo</p>
+                <h2>O futuro não espera. E você?</h2>
+                <p>O mercado de tecnologia não para de crescer. Construa hoje a base sólida que você precisa para
+                    alcançar seus maiores objetivos profissionais.</p>
+                <a href="https://site-letramento.vercel.app/" class="btn btn-primary"
+                    style="font-size: 1.2rem; padding: 20px 50px;">Acessar Portal do Estudante</a>
+                <p style="font-size: 0.85rem; margin-top: 20px; color: var(--text-muted);">Conhecimento prático •
+                    Certificado incluso • Flexibilidade total</p>
             </div>
         </div>
     </section>
@@ -483,12 +536,13 @@
     <footer>
         <div class="container">
             <div class="logo">conecta<span>.uniso</span></div>
-            <p>© 2026 conecta.uniso - Todos os direitos reservados.</p>
-            <p style="margin-top: 5px;">Um projeto dedicado à inclusão digital e futuro profissional de jovens.</p>
+            <p>© 2026 conecta.uniso - Uniso e Você, transformando o futuro.</p>
+            <p style="margin-top: 5px;">Um projeto social dedicado à democratização do ensino tecnológico e inclusão
+                digital de jovens talentos.</p>
             <p style="margin-top: 20px; font-size: 0.85rem;">
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Política de Privacidade</a> • 
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Termos de Uso</a> • 
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Contato</a>
+                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Portal Acadêmico</a> •
+                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Suporte</a> •
+                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Uniso Home</a>
             </p>
         </div>
     </footer>
@@ -558,4 +612,5 @@
     </script>
 
 </body>
-</html>     
+
+</html>
