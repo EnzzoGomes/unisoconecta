@@ -389,6 +389,73 @@
                 margin: 0 10px 50px;
                 padding: 60px 20px;
             }
+
+            .vol-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vol-section {
+            padding: 100px 0;
+            background: #080808;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .vol-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .vol-info h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .vol-info p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .vol-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid #222;
+        }
+
+        .vol-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .vol-form input,
+        .vol-form textarea {
+            background: #000;
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .vol-form button {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .vol-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px var(--primary);
         }
     </style>
 </head>
@@ -400,7 +467,7 @@
         <div class="nav-links">
             <a href="#cursos">Trilhas</a>
             <a href="#turmas">Informações</a>
-            <a href="voluntarios.html">Voluntariado</a>
+            <a href="#voluntariado">Voluntariado</a>
             <a href="#impacto">O Impacto</a>
             <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 12px 28px;">Acessar
                 Portal</a>
@@ -517,13 +584,44 @@
         </div>
     </section>
 
+    <section class="vol-section" id="voluntariado">
+        <div class="container">
+            <div class="vol-grid">
+                <div class="vol-info">
+                    <span class="section-label">Oportunidade</span>
+                    <h2>Compartilhe seu conhecimento</h2>
+                    <p>Venha ajudar na formação da nossa próxima turma. Se você domina Pacote Office ou Inteligência
+                        Artificial, sua experiência pode mudar o futuro de 20 jovens aprendizes.</p>
+                    <div
+                        style="background: rgba(124, 58, 237, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(124, 58, 237, 0.2);">
+                        <h4 style="margin-bottom: 15px; color: var(--primary);">O que buscamos:</h4>
+                        <ul style="list-style: none; color: var(--gray);">
+                            <li style="margin-bottom: 10px;">• Monitoria em informática básica</li>
+                            <li style="margin-bottom: 10px;">• Apoio técnico em IA</li>
+                            <li style="margin-bottom: 10px;">• Mentoria de carreira</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="vol-card">
+                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Seja um Voluntário</h3>
+                    <form class="vol-form" action="mailto:enzzogomes40@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" placeholder="Nome Completo" name="nome" required>
+                        <input type="email" placeholder="E-mail de Contato" name="email" required>
+                        <textarea placeholder="Sua experiência..." name="msg" rows="4" required></textarea>
+                        <button type="submit">Enviar Candidatura</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="logo">conecta<span>.uniso</span></div>
             <p>© 2026 conecta.uniso - Uniso e Você, transformando o futuro.</p>
             <p style="margin-top: 20px;">
                 <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Suporte</a> •
-                <a href="voluntarios.html" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Seja
+                <a href="#voluntariado" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Seja
                     Voluntário</a>
             </p>
         </div>
