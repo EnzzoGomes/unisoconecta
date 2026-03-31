@@ -4,24 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conecta.uniso - Domine as Habilidades do Futuro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #050505;
-            --card-bg: #111;
-            --primary: #7c3aed;
-            --primary-glow: rgba(124, 58, 237, 0.5);
-            --white: #ffffff;
-            --gray: #a3a3a3;
-            --text-muted: #666;
-        }<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conecta.uniso - Domine as Habilidades do Futuro</title>
+    <title>conecta.uniso - Conectando Jovens ao Futuro</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -48,7 +31,6 @@
             overflow-x: hidden;
         }
 
-        /* Scrollbar personalizada */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -68,7 +50,6 @@
             padding: 0 20px;
         }
 
-        /* --- Navbar Fixa --- */
         nav {
             height: 80px;
             display: flex;
@@ -90,6 +71,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
         }
 
         .logo span {
@@ -114,7 +96,6 @@
             color: var(--primary);
         }
 
-        /* --- Hero Section --- */
         .hero {
             padding: 120px 0 80px;
             text-align: center;
@@ -219,16 +200,44 @@
             background: rgba(124, 58, 237, 0.1);
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
+        .course-info {
+            padding: 80px 0;
+            background: #080808;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
         }
 
-        /* --- Features Section --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .info-item {
+            text-align: center;
+            background: #111;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .info-label {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .info-text {
+            font-size: 1.1rem;
+            color: var(--white);
+            font-weight: 600;
+        }
+
         .features {
             padding: 100px 0;
             background: linear-gradient(to bottom, var(--bg), #0a0a0a);
@@ -278,96 +287,11 @@
             overflow: hidden;
         }
 
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), transparent);
-            opacity: 0;
-            transition: 0.4s;
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
         .feature-card:hover {
             border-color: var(--primary);
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
         }
 
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), #a855f7);
-            border-radius: 15px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .feature-card p {
-            color: var(--gray);
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* --- CTA Section --- */
-        .cta-section {
-            padding: 100px 40px;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            border-radius: 30px;
-            margin: 0 20px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at center, rgba(124, 58, 237, 0.2), transparent 70%);
-        }
-
-        .cta-box {
-            max-width: 650px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-box h2 {
-            font-size: clamp(2.2rem, 6vw, 3.5rem);
-            margin-bottom: 25px;
-            font-weight: 800;
-        }
-
-        .cta-box p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        /* --- Estatísticas --- */
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -384,18 +308,48 @@
             font-weight: 800;
             background: linear-gradient(135deg, var(--primary), #a855f7);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
         }
 
         .stat-label {
             color: var(--gray);
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-top: 10px;
         }
 
-        /* --- Footer --- */
+        .cta-section {
+            padding: 100px 40px;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            margin: 0 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box {
+            max-width: 650px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .cta-box p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+
         footer {
             padding: 60px 0 40px;
             border-top: 1px solid #1a1a1a;
@@ -406,7 +360,6 @@
         footer .logo {
             justify-content: center;
             margin-bottom: 20px;
-            font-size: 1.8rem;
         }
 
         footer p {
@@ -415,7 +368,6 @@
             margin: 10px 0;
         }
 
-        /* --- Responsividade --- */
         @media (max-width: 768px) {
             nav {
                 padding: 0 20px;
@@ -429,17 +381,8 @@
                 padding: 80px 0 60px;
             }
 
-            h1 {
-                font-size: 2.5rem;
-            }
-
             .grid-features {
                 grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 30px;
             }
 
             .cta-section {
@@ -452,9 +395,8 @@
 
 <body>
 
-    <!-- Navbar -->
     <nav>
-        <div class="logo">conecta<span>.uniso</span></div>
+        <a href="index.html" class="logo">conecta<span>.uniso</span></a>
         <div class="nav-links">
             <a href="#cursos">Trilhas</a>
             <a href="#turmas">Informações</a>
@@ -465,67 +407,18 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <span class="badge">Inscrições Abertas • 2026</span>
             <h1>Conectando Jovens ao <br>Futuro Digital</h1>
-            <p>O conecta.uniso oferece capacitação gratuita em tecnologia para jovens que buscam se preparar para o
-                mercado de trabalho. Aprenda as ferramentas essenciais do dia a dia e as novidades da Inteligência
-                Artificial.</p>
+            <p>Capacitação gratuita em tecnologia para jovens que buscam se preparar para o mercado de trabalho. Aprenda
+                as ferramentas essenciais do dia a dia e as novidades da Inteligência Artificial.</p>
             <div class="hero-buttons">
                 <a href="https://site-letramento.vercel.app/" class="btn btn-primary">Iniciar Minha Jornada Grátis</a>
                 <a href="#turmas" class="btn btn-secondary">Detalhes do Curso</a>
             </div>
         </div>
     </section>
-
-    <!-- Informações do Curso -->
-    <style>
-        .course-info {
-            padding: 80px 0;
-            background: #080808;
-            border-top: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
-
-        .info-item {
-            text-align: center;
-            background: #111;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
-
-        .info-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .info-label {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .info-text {
-            font-size: 1.1rem;
-            color: var(--white);
-            font-weight: 600;
-            line-height: 1.4;
-        }
-    </style>
 
     <section class="course-info" id="turmas">
         <div class="container">
@@ -550,873 +443,101 @@
         </div>
     </section>
 
-    <!-- Features -->
     <section class="features" id="cursos">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Capacitação Real</span>
-                <h2>Prepare-se para o seu primeiro emprego</h2>
-                <p>Nossas trilhas de aprendizado são focadas no que o mercado realmente pede. Com aulas práticas e
-                    diretas ao ponto, você sai pronto para os desafios profissionais atuais.</p>
+                <span class="section-label">Capacitação Profissional</span>
+                <h2>Sua Carreira Começa Aqui</h2>
+                <p>Nossas trilhas de aprendizado são projetadas para atender as demandas reais das empresas. Com uma
+                    metodologia prática e focada no essencial, preparamos você para conquistar sua primeira oportunidade
+                    com confiança.</p>
             </div>
 
             <div class="grid-features">
                 <div class="feature-card">
-                    <div class="icon-box"></div>
+                    <div class="icon-box"
+                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                    </div>
                     <h3>Domínio do Pacote Office</h3>
-                    <p>Aprenda a dominar o Excel, Word e PowerPoint. São os softwares fundamentais em qualquer
-                        escritório, ensinados do básico ao avançado para você não ter dúvidas.</p>
+                    <p>Aprenda a fundamentação necessária em Excel, Word e PowerPoint para se destacar em qualquer
+                        ambiente corporativo.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box"></div>
+                    <div class="icon-box"
+                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                    </div>
                     <h3>Introdução à IA</h3>
-                    <p>Entenda o que é inteligência artificial e como usar ferramentas de IA para facilitar suas tarefas
-                        cotidianas, ganhar tempo e ser mais produtivo.</p>
+                    <p>Entenda como a Inteligência Artificial pode facillitar suas tarefas cotidianas e aumentar sua
+                        eficiência profissional.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box"></div>
+                    <div class="icon-box"
+                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                    </div>
                     <h3>Certificação Uniso</h3>
-                    <p>Conclua seu treinamento e receba um certificado oficial da Uniso, reconhecido pelo mercado e que
-                        vai fazer toda a diferença no seu currículo.</p>
+                    <p>Receba um certificado oficial da Uniso ao concluir seu treinamento, adicionando autoridade ao seu
+                        currículo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Estatísticas -->
     <section id="impacto">
         <div class="container">
             <div class="stats">
                 <div class="stat-item">
                     <div class="stat-number">100%</div>
-                    <div class="stat-label">Democratização Tecnológica</div>
+                    <div class="stat-label">Gratuito</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">3</div>
-                    <div class="stat-label">Eixos de Conhecimento</div>
+                    <div class="stat-label">Trilhas Ativas</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">24/7</div>
-                    <div class="stat-label">Capacitação Síncrona e Assíncrona</div>
+                    <div class="stat-label">Acesso Online</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">∞</div>
-                    <div class="stat-label">Escalabilidade de Carreira</div>
+                    <div class="stat-label">Potencial</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section" id="sobre">
+    <section class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>Converta Potencial em Liderança</h2>
-                <p>A disrupção tecnológica é inevitável. Sua preparação é estratégica. Junte-se ao ecossistema
-                    conecta.uniso e garanta as ferramentas necessárias para liderar a mudança digital em sua trajetória.
-                </p>
+                <h2>Pronto para dar o próximo passo?</h2>
+                <p>Junte-se ao conecta.uniso e garanta sua vaga para o ciclo de 2026. A transformação digital começa com
+                    você.</p>
                 <a href="https://site-letramento.vercel.app/" class="btn btn-primary"
-                    style="font-size: 1.2rem; padding: 20px 50px;">Inscrever-se no Ecossistema</a>
-                <p style="font-size: 0.85rem; margin-top: 20px; color: var(--text-muted);">Formação Estratégica •
-                    Autoridade Acadêmica • Flexibilidade Adaptativa</p>
+                    style="font-size: 1.2rem; padding: 20px 50px;">Acessar Portal Agora</a>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="logo">conecta<span>.uniso</span></div>
             <p>© 2026 conecta.uniso - Uniso e Você, transformando o futuro.</p>
-            <p style="margin-top: 5px;">Um projeto social dedicado à democratização do ensino tecnológico e inclusão
-                digital de jovens talentos.</p>
-            <p style="margin-top: 20px; font-size: 0.85rem;">
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Portal Acadêmico</a> •
+            <p style="margin-top: 20px;">
                 <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Suporte</a> •
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Uniso Home</a>
+                <a href="voluntarios.html" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Seja
+                    Voluntário</a>
             </p>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll para âncoras
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         });
-
-        // Animação ao scroll
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(40px)';
-            el.style.transition = 'all 0.7s ease-out';
-            observer.observe(el);
-        });
-
-        // Animação dos números das estatísticas
-        const animateNumber = (element, target) => {
-            let current = 0;
-            const increment = target / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target === Infinity ? '∞' : target + (target === 100 ? '%' : '');
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current) + (target === 100 ? '%' : '');
-                }
-            }, 30);
-        };
-
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const number = entry.target.querySelector('.stat-number');
-                    const text = number.textContent;
-                    if (text === '100%') animateNumber(number, 100);
-                    else if (text === '3') animateNumber(number, 3);
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-item').forEach(stat => statsObserver.observe(stat));
     </script>
-
-</body>
-
-</html>
-        }
-
-        /* Scrollbar personalizada */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 10px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* --- Navbar Fixa --- */
-        nav {
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #222;
-            position: sticky;
-            top: 0;
-            background: rgba(5, 5, 5, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 0 40px;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.6rem;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--gray);
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            background: radial-gradient(circle at top, #1e1b4b 0%, #050505 60%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
-            pointer-events: none;
-        }
-
-        .badge {
-            background: rgba(124, 58, 237, 0.15);
-            color: var(--primary);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 1px solid var(--primary);
-            margin-bottom: 30px;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 10px var(--primary-glow);
-            }
-
-            50% {
-                box-shadow: 0 0 20px var(--primary);
-            }
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            background: linear-gradient(to right, #fff, #a3a3a3);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 50px;
-            line-height: 1.8;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn {
-            padding: 18px 40px;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-            cursor: pointer;
-            font-size: 1rem;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 0 25px var(--primary-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px var(--primary);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid #333;
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            background: rgba(124, 58, 237, 0.1);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* --- Features Section --- */
-        .features {
-            padding: 100px 0;
-            background: linear-gradient(to bottom, var(--bg), #0a0a0a);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-
-        .section-label {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .section-header p {
-            color: var(--gray);
-            max-width: 650px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-
-        .grid-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            padding: 45px 35px;
-            border-radius: 20px;
-            border: 1px solid #1a1a1a;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), transparent);
-            opacity: 0;
-            transition: 0.4s;
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        .feature-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
-        }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), #a855f7);
-            border-radius: 15px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .feature-card p {
-            color: var(--gray);
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* --- CTA Section --- */
-        .cta-section {
-            padding: 100px 40px;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            border-radius: 30px;
-            margin: 0 20px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at center, rgba(124, 58, 237, 0.2), transparent 70%);
-        }
-
-        .cta-box {
-            max-width: 650px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-box h2 {
-            font-size: clamp(2.2rem, 6vw, 3.5rem);
-            margin-bottom: 25px;
-            font-weight: 800;
-        }
-
-        .cta-box p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        /* --- Estatísticas --- */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            padding: 80px 0;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: var(--gray);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            padding: 60px 0 40px;
-            border-top: 1px solid #1a1a1a;
-            text-align: center;
-            background: #000;
-        }
-
-        footer .logo {
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 10px 0;
-        }
-
-        /* --- Responsividade --- */
-        @media (max-width: 768px) {
-            nav {
-                padding: 0 20px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                padding: 80px 0 60px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .grid-features {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .cta-section {
-                margin: 0 10px 50px;
-                padding: 60px 20px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">conecta<span>.uniso</span></div>
-        <div class="nav-links">
-            <a href="#cursos">Trilhas</a>
-            <a href="#voluntarios">Voluntariado</a>
-            <a href="#impacto">O Impacto</a>
-            <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 12px 28px;">Acessar
-                Portal</a>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <span class="badge">Inscrições Abertas • Ciclo 2026</span>
-            <h1>Protagonize o Futuro da <br>Inteligência e Tecnologia</h1>
-            <p>O conecta.uniso transcende a capacitação técnica convencional. Somos um ecossistema de aceleração que
-                funde a excelência acadêmica da UNISO com as ferramentas mais disruptivas de 2026. Prepare-se para
-                liderar em um cenário de inteligência artificial onipresente e produtividade estratégica sem
-                precedentes.</p>
-            <div class="hero-buttons">
-                <a href="https://site-letramento.vercel.app/" class="btn btn-primary">Iniciar Minha Jornada Grátis</a>
-                <a href="#sobre" class="btn btn-secondary">Explorar Benefícios</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features" id="cursos">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Aceleração de Perfil Profissional</span>
-                <h2>Orquestre o seu Sucesso na Era da Automação</h2>
-                <p>Nossas trilhas de conhecimento foram projetadas para converter curiosidade técnica em vantagem
-                    competitiva real. Não ensinamos apenas ferramentas; formatamos a mentalidade necessária para dominar
-                    a inovação e o fluxo de trabalho de alta performance exigido pelas corporações modernas.</p>
-            </div>
-
-            <div class="grid-features">
-                <div class="feature-card">
-                    <div class="icon-box"></div>
-                    <h3>Arquitetura de Fluxos Digitais</h3>
-                    <p>Transcenda o uso básico de ferramentas de escritório. Projete ecossistemas de dados em planilhas
-                        inteligentes e automatize a gestão de informações corporativas de forma estratégica.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"></div>
-                    <h3>Cognição Artificial Aplicada</h3>
-                    <p>Domine o potencial das IAs generativas para otimizar processos criativos e analíticos,
-                        posicionando-se como um facilitador da inovação e eficiência dentro de qualquer organização.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box"></div>
-                    <h3>Chancela de Especialista Uniso</h3>
-                    <p>Formalize sua expertise com uma certificação universitária de prestígio. Valide suas competências
-                        técnicas com a autoridade de uma das instituições mais respeitadas da região.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Estatísticas -->
-    <section id="impacto">
-        <div class="container">
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Democratização Tecnológica</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Eixos de Conhecimento</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Capacitação Síncrona e Assíncrona</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">Escalabilidade de Carreira</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section" id="sobre">
-        <div class="container">
-            <div class="cta-box">
-                <h2>Converta Potencial em Liderança</h2>
-                <p>A disrupção tecnológica é inevitável. Sua preparação é estratégica. Junte-se ao ecossistema
-                    conecta.uniso e garanta as ferramentas necessárias para liderar a mudança digital em sua trajetória.
-                </p>
-                <a href="https://site-letramento.vercel.app/" class="btn btn-primary"
-                    style="font-size: 1.2rem; padding: 20px 50px;">Inscrever-se no Ecossistema</a>
-                <p style="font-size: 0.85rem; margin-top: 20px; color: var(--text-muted);">Formação Estratégica •
-                    Autoridade Acadêmica • Flexibilidade Adaptativa</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Voluntários Section -->
-    <style>
-        .volunteer-section {
-            padding: 100px 0;
-            background: #080808;
-            border-top: 1px solid #1a1a1a;
-        }
-
-        .vol-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .vol-info h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .vol-info p {
-            color: var(--gray);
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-
-        .vol-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 24px;
-            border: 1px solid #222;
-        }
-
-        .vol-list {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .vol-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--white);
-        }
-
-        .vol-list li span {
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .vol-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .vol-form input,
-        .vol-form textarea {
-            background: #000;
-            border: 1px solid #333;
-            padding: 15px;
-            border-radius: 10px;
-            color: white;
-            font-family: inherit;
-        }
-
-        .vol-form button {
-            background: var(--primary);
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .vol-form button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .vol-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
-    <section class="volunteer-section" id="voluntarios">
-        <div class="container">
-            <div class="vol-grid">
-                <div class="vol-info">
-                    <span class="section-label">Mobilização Social</span>
-                    <h2>Transmita Conhecimento, Transforme Realidades</h2>
-                    <p>Sua expertise é o combustível que esses jovens precisam para acelerar suas carreiras. Ao se
-                        tornar um voluntário, você valida o futuro de 20 adolescentes ávidos por inovação.</p>
-                    <ul class="vol-list">
-                        <li><span>•</span> Conteúdo: Pacote Office & Fundamentos de IA</li>
-                        <li><span>•</span> Horário: Terças e Quintas, 14h às 17h</li>
-                        <li><span>•</span> Local: Campus UNISO (Início Abril 2026)</li>
-                        <li><span>•</span> Público: 20 Adolescentes Jovens Aprendizes</li>
-                    </ul>
-                </div>
-                <div class="vol-card">
-                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Candidatar-se à Vaga</h3>
-                    <form class="vol-form" action="mailto:enzzogomes40@gmail.com" method="post" enctype="text/plain">
-                        <input type="text" placeholder="Seu Nome Completo" required>
-                        <input type="email" placeholder="Seu E-mail Profissional" required>
-                        <textarea placeholder="Fale brevemente sobre sua experiência com TI ou IA" rows="4"
-                            required></textarea>
-                        <button type="submit">Enviar Candidatura para Análise</button>
-                    </form>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 15px; text-align: center;">
-                        Os dados serão encaminhados para: enzzogomes40@gmail.com
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="logo">conecta<span>.uniso</span></div>
-            <p>© 2026 conecta.uniso - Uniso e Você, transformando o futuro.</p>
-            <p style="margin-top: 5px;">Um projeto social dedicado à democratização do ensino tecnológico e inclusão
-                digital de jovens talentos.</p>
-            <p style="margin-top: 20px; font-size: 0.85rem;">
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Portal Acadêmico</a> •
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Suporte</a> •
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Uniso Home</a>
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scroll para âncoras
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Animação ao scroll
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(40px)';
-            el.style.transition = 'all 0.7s ease-out';
-            observer.observe(el);
-        });
-
-        // Animação dos números das estatísticas
-        const animateNumber = (element, target) => {
-            let current = 0;
-            const increment = target / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target === Infinity ? '∞' : target + (target === 100 ? '%' : '');
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current) + (target === 100 ? '%' : '');
-                }
-            }, 30);
-        };
-
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const number = entry.target.querySelector('.stat-number');
-                    const text = number.textContent;
-                    if (text === '100%') animateNumber(number, 100);
-                    else if (text === '3') animateNumber(number, 3);
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-item').forEach(stat => statsObserver.observe(stat));
-    </script>
-
 </body>
 
 </html>
