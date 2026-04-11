@@ -8,13 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
-            --card-bg: #111;
-            --primary: #7c3aed;
-            --primary-glow: rgba(124, 58, 237, 0.5);
+            --bg: #000000;
+            --card-bg: #0a0a0a;
+            --card-border: #1a1a1a;
+            --primary: #0693e3;
+            --primary-glow: rgba(6, 147, 227, 0.3);
             --white: #ffffff;
-            --gray: #a3a3a3;
-            --text-muted: #666;
+            --gray: #abb8c3;
+            --text-muted: #666666;
+            --gradient-midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
         }
 
         * {
@@ -32,11 +34,11 @@
         }
 
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #000;
+            background: var(--bg);
         }
 
         ::-webkit-scrollbar-thumb {
@@ -51,31 +53,35 @@
         }
 
         nav {
-            height: 80px;
+            height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid var(--card-border);
             position: sticky;
             top: 0;
-            background: rgba(5, 5, 5, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(3, 3, 3, 0.8);
+            backdrop-filter: blur(12px);
             z-index: 1000;
-            padding: 0 40px;
+            padding: 0 5%;
         }
 
         .logo {
             font-weight: 800;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--white);
             display: flex;
             align-items: center;
             gap: 10px;
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .logo span {
             color: var(--primary);
+            background: var(--gradient-midnight);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .nav-links {
@@ -99,7 +105,7 @@
         .hero {
             padding: 120px 0 80px;
             text-align: center;
-            background: radial-gradient(circle at top, #1e1b4b 0%, #050505 60%);
+            background: radial-gradient(circle at top, #020381 0%, #000000 70%);
             position: relative;
             overflow: hidden;
         }
@@ -110,14 +116,14 @@
             top: -50%;
             left: 50%;
             transform: translateX(-50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
+            width: 1000px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(6, 147, 227, 0.1), transparent 70%);
             pointer-events: none;
         }
 
         .badge {
-            background: rgba(124, 58, 237, 0.15);
+            background: rgba(0, 74, 153, 0.1);
             color: var(--primary);
             padding: 10px 20px;
             border-radius: 50px;
@@ -148,7 +154,7 @@
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 25px;
-            background: linear-gradient(to right, #fff, #a3a3a3);
+            background: linear-gradient(to bottom, #fff 40%, #a3a3a3);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -157,11 +163,11 @@
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto 50px;
-            line-height: 1.8;
+            line-height: 1.6;
             position: relative;
             z-index: 1;
         }
@@ -181,12 +187,11 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 0 25px var(--primary-glow);
         }
 
         .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--primary-glow);
         }
 
         .btn-secondary {
@@ -197,14 +202,13 @@
 
         .btn-secondary:hover {
             border-color: var(--primary);
-            background: rgba(124, 58, 237, 0.1);
+            background: rgba(0, 74, 153, 0.05);
         }
 
         .course-info {
             padding: 80px 0;
-            background: #080808;
-            border-top: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
+            background: var(--bg);
+            border-top: 1px solid var(--card-border);
         }
 
         .info-grid {
@@ -215,11 +219,14 @@
 
         .info-item {
             text-align: center;
-            background: #111;
+            background: rgba(255, 255, 255, 0.02);
             padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #222;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .info-label {
@@ -233,14 +240,14 @@
         }
 
         .info-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--white);
             font-weight: 600;
         }
 
         .features {
             padding: 100px 0;
-            background: linear-gradient(to bottom, var(--bg), #0a0a0a);
+            background: var(--bg);
         }
 
         .section-header {
@@ -278,18 +285,19 @@
         }
 
         .feature-card {
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.02);
             padding: 45px 35px;
-            border-radius: 20px;
-            border: 1px solid #1a1a1a;
+            border-radius: 24px;
+            border: 1px solid var(--card-border);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
         .feature-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-10px);
+            border-color: rgba(0, 74, 153, 0.5);
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateY(-5px);
         }
 
         .stats {
@@ -306,7 +314,7 @@
         .stat-number {
             font-size: 3.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), #a855f7);
+            background: var(--gradient-midnight);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -320,12 +328,12 @@
         }
 
         .cta-section {
-            padding: 100px 40px;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+            padding: 120px 40px;
+            background: linear-gradient(rgba(3, 3, 3, 0.85), rgba(3, 3, 3, 0.85)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
-            border-radius: 30px;
-            margin: 0 20px 80px;
+            border-radius: 40px;
+            margin: 0 4% 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -351,15 +359,15 @@
         }
 
         footer {
-            padding: 60px 0 40px;
-            border-top: 1px solid #1a1a1a;
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--card-border);
             text-align: center;
-            background: #000;
+            background: var(--bg);
         }
 
         footer .logo {
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         footer p {
@@ -397,8 +405,8 @@
 
         .vol-section {
             padding: 100px 0;
-            background: #080808;
-            border-top: 1px solid #1a1a1a;
+            background: var(--bg);
+            border-top: 1px solid var(--card-border);
         }
 
         .vol-grid {
@@ -421,25 +429,31 @@
         }
 
         .vol-card {
-            background: var(--card-bg);
+            background: rgba(255, 255, 255, 0.02);
             padding: 40px;
-            border-radius: 30px;
-            border: 1px solid #222;
+            border-radius: 24px;
+            border: 1px solid var(--card-border);
         }
 
         .vol-form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .vol-form input,
         .vol-form textarea {
-            background: #000;
-            border: 1px solid #333;
-            padding: 15px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--card-border);
+            padding: 16px;
+            border-radius: 12px;
             color: white;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .vol-form input:focus, .vol-form textarea:focus {
+            border-color: var(--primary);
         }
 
         .vol-form button {
@@ -454,8 +468,20 @@
         }
 
         .vol-form button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--primary-glow);
+        }
+
+        .icon-box-svg {
+            width: 48px;
+            height: 48px;
+            background: rgba(6, 147, 227, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary);
         }
     </style>
 </head>
@@ -469,14 +495,14 @@
             <a href="#turmas">Informações</a>
             <a href="#voluntariado">Voluntariado</a>
             <a href="#impacto">O Impacto</a>
-            <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 12px 28px;">Acessar
+            <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Acessar
                 Portal</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <span class="badge">Inscrições Abertas • 2026</span>
+            <span class="badge">Inscrições Abertas 2026</span>
             <h1>Conectando Jovens ao <br>Futuro Digital</h1>
             <p>Capacitação gratuita em tecnologia para jovens que buscam se preparar para o mercado de trabalho. Aprenda
                 as ferramentas essenciais do dia a dia e as novidades da Inteligência Artificial.</p>
@@ -522,24 +548,24 @@
 
             <div class="grid-features">
                 <div class="feature-card">
-                    <div class="icon-box"
-                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                    <div class="icon-box-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
                     </div>
                     <h3>Domínio do Pacote Office</h3>
                     <p>Aprenda a fundamentação necessária em Excel, Word e PowerPoint para se destacar em qualquer
                         ambiente corporativo.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box"
-                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                    <div class="icon-box-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
                     </div>
                     <h3>Introdução à IA</h3>
                     <p>Entenda como a Inteligência Artificial pode facillitar suas tarefas cotidianas e aumentar sua
                         eficiência profissional.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon-box"
-                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                    <div class="icon-box-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                     </div>
                     <h3>Certificação Uniso</h3>
                     <p>Receba um certificado oficial da Uniso ao concluir seu treinamento, adicionando autoridade ao seu
@@ -593,7 +619,7 @@
                     <p>Venha ajudar na formação da nossa próxima turma. Se você domina Pacote Office ou Inteligência
                         Artificial, sua experiência pode mudar o futuro de 20 jovens aprendizes.</p>
                     <div
-                        style="background: rgba(124, 58, 237, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(124, 58, 237, 0.2);">
+                        style="background: rgba(6, 147, 227, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(6, 147, 227, 0.2);">
                         <h4 style="margin-bottom: 15px; color: var(--primary);">O que buscamos:</h4>
                         <ul style="list-style: none; color: var(--gray);">
                             <li style="margin-bottom: 10px;">• Monitoria em informática básica</li>
