@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conecta.uniso - Conectando Jovens ao Futuro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Universidade de Sorocaba - UNISO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
-            --card-bg: #111;
-            --primary: #7c3aed;
-            --primary-glow: rgba(124, 58, 237, 0.5);
-            --white: #ffffff;
-            --gray: #a3a3a3;
-            --text-muted: #666;
+            --bg: #ffffff;
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --primary: #004a92; /* Azul Institucional Uniso */
+            --primary-glow: rgba(0, 74, 146, 0.1);
+            --text-main: #1f2937;
+            --gray: #4b5563;
+            --text-muted: #9ca3af;
+            --gradient-midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --uniso-blue-dark: #002d5a;
         }
 
         * {
@@ -26,17 +29,17 @@
 
         body {
             background-color: var(--bg);
-            color: var(--white);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #000;
+            background: var(--bg);
         }
 
         ::-webkit-scrollbar-thumb {
@@ -51,27 +54,35 @@
         }
 
         nav {
-            height: 80px;
+            height: auto;
+            min-height: 100px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #222;
+            border-bottom: 2px solid #edf2f7;
             position: sticky;
             top: 0;
-            background: rgba(5, 5, 5, 0.95);
-            backdrop-filter: blur(10px);
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             z-index: 1000;
-            padding: 0 40px;
+            padding: 10px 5%;
         }
 
         .logo {
-            font-weight: 800;
-            font-size: 1.6rem;
-            color: var(--white);
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--uniso-blue-dark);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
+            letter-spacing: -0.8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
         }
 
         .logo span {
@@ -85,11 +96,12 @@
         }
 
         .nav-links a {
-            color: var(--gray);
+            color: var(--uniso-blue-dark);
             text-decoration: none;
             font-weight: 500;
             transition: 0.3s;
             font-size: 0.95rem;
+            letter-spacing: -0.3px;
         }
 
         .nav-links a:hover {
@@ -99,7 +111,7 @@
         .hero {
             padding: 120px 0 80px;
             text-align: center;
-            background: radial-gradient(circle at top, #1e1b4b 0%, #050505 60%);
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
         }
@@ -110,58 +122,80 @@
             top: -50%;
             left: 50%;
             transform: translateX(-50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
+            width: 1000px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(6, 147, 227, 0.1), transparent 70%);
             pointer-events: none;
         }
 
         .badge {
-            background: rgba(124, 58, 237, 0.15);
+            background: #f0f7ff;
             color: var(--primary);
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
+            font-size: 0.8rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 1px solid var(--primary);
+            letter-spacing: 0.8px;
+            border: 1px solid #e0e7ff;
             margin-bottom: 30px;
             display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 10px var(--primary-glow);
-            }
-
-            50% {
-                box-shadow: 0 0 20px var(--primary);
-            }
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            background: linear-gradient(to right, #fff, #a3a3a3);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--uniso-blue-dark);
             position: relative;
             z-index: 1;
+            letter-spacing: -0.8px;
+            text-transform: none;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--uniso-blue-dark);
+            letter-spacing: -0.6px;
+            text-transform: none;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: var(--uniso-blue-dark);
+            letter-spacing: -0.3px;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            letter-spacing: -0.2px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-weight: 400;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: var(--gray);
+            font-size: 1.05rem;
+            color: var(--text-main);
             max-width: 700px;
             margin: 0 auto 50px;
-            line-height: 1.8;
+            line-height: 1.7;
             position: relative;
             z-index: 1;
         }
@@ -169,42 +203,41 @@
         .btn {
             padding: 18px 40px;
             border-radius: 12px;
-            font-weight: 700;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
             cursor: pointer;
             font-size: 1rem;
             border: none;
+            letter-spacing: -0.3px;
         }
 
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 0 25px var(--primary-glow);
         }
 
         .btn-primary:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--primary-glow);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid #333;
-            color: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         .btn-secondary:hover {
             border-color: var(--primary);
-            background: rgba(124, 58, 237, 0.1);
+            background: var(--primary-glow);
         }
 
         .course-info {
             padding: 80px 0;
-            background: #080808;
-            border-top: 1px solid #1a1a1a;
-            border-bottom: 1px solid #1a1a1a;
+            background: var(--bg);
+            border-top: 1px solid var(--card-border);
         }
 
         .info-grid {
@@ -215,32 +248,44 @@
 
         .info-item {
             text-align: center;
-            background: #111;
+            background: #ffffff;
             padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #222;
+            border-radius: 16px;
+            border: 1px solid #edf2f7;
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            cursor: default;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         .info-label {
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 600;
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             display: block;
             margin-bottom: 15px;
         }
 
         .info-text {
-            font-size: 1.1rem;
-            color: var(--white);
+            font-size: 1.05rem;
+            color: var(--uniso-blue-dark);
             font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.3px;
         }
 
         .features {
             padding: 100px 0;
-            background: linear-gradient(to bottom, var(--bg), #0a0a0a);
+            background: var(--bg);
         }
 
         .section-header {
@@ -250,25 +295,28 @@
 
         .section-label {
             color: var(--primary);
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 0.8px;
             margin-bottom: 15px;
             display: block;
         }
 
         .section-header h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: 2.4rem;
             margin-bottom: 20px;
-            font-weight: 800;
+            font-weight: 700;
+            color: var(--uniso-blue-dark);
+            letter-spacing: -0.7px;
         }
 
         .section-header p {
             color: var(--gray);
             max-width: 650px;
             margin: 0 auto;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
 
         .grid-features {
@@ -278,18 +326,61 @@
         }
 
         .feature-card {
-            background: var(--card-bg);
-            padding: 45px 35px;
-            border-radius: 20px;
-            border: 1px solid #1a1a1a;
+            background: #ffffff;
+            padding: 40px 35px;
+            border-radius: 24px;
+            border: 1px solid #edf2f7;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .feature-card:hover {
             border-color: var(--primary);
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: var(--uniso-blue-dark);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+        }
+
+        .feature-card .more-info {
+            margin-top: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            letter-spacing: -0.2px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 5px 14px;
+            background: #f0f7ff;
+            color: var(--primary);
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .stats {
@@ -304,28 +395,28 @@
         }
 
         .stat-number {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), #a855f7);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary);
+            letter-spacing: -0.3px;
         }
 
         .stat-label {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             margin-top: 10px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
         }
 
         .cta-section {
-            padding: 100px 40px;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+            padding: 120px 40px;
+            background: linear-gradient(rgba(0, 45, 90, 0.85), rgba(0, 45, 90, 0.85)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
-            border-radius: 30px;
-            margin: 0 20px 80px;
+            border-radius: 40px;
+            margin: 0 4% 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -339,33 +430,37 @@
         }
 
         .cta-box h2 {
-            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-size: 2.8rem;
             margin-bottom: 25px;
-            font-weight: 800;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.8px;
         }
 
         .cta-box p {
-            font-size: 1.2rem;
-            color: var(--gray);
+            font-size: 1.1rem;
+            color: #e2e8f0;
             margin-bottom: 40px;
+            line-height: 1.7;
         }
 
         footer {
-            padding: 60px 0 40px;
-            border-top: 1px solid #1a1a1a;
+            padding: 80px 0 40px;
+            border-top: 1px solid #edf2f7;
             text-align: center;
-            background: #000;
+            background: #f9fafb;
         }
 
         footer .logo {
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         footer p {
             color: var(--text-muted);
             font-size: 0.95rem;
             margin: 10px 0;
+            font-weight: 400;
         }
 
         @media (max-width: 768px) {
@@ -397,8 +492,8 @@
 
         .vol-section {
             padding: 100px 0;
-            background: #080808;
-            border-top: 1px solid #1a1a1a;
+            background: var(--bg);
+            border-top: 1px solid var(--card-border);
         }
 
         .vol-grid {
@@ -409,37 +504,50 @@
         }
 
         .vol-info h2 {
-            font-size: 3rem;
+            font-size: 2.4rem;
             margin-bottom: 25px;
-            font-weight: 800;
+            color: var(--uniso-blue-dark);
+            font-weight: 700;
+            letter-spacing: -0.7px;
         }
 
         .vol-info p {
             color: var(--gray);
             margin-bottom: 30px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
 
         .vol-card {
-            background: var(--card-bg);
+            background: #ffffff;
             padding: 40px;
-            border-radius: 30px;
-            border: 1px solid #222;
+            border-radius: 24px;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .vol-form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .vol-form input,
-        .vol-form textarea {
-            background: #000;
-            border: 1px solid #333;
-            padding: 15px;
-            border-radius: 10px;
-            color: white;
+        .vol-form textarea,
+        .vol-form select {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 16px;
+            border-radius: 12px;
+            color: var(--uniso-blue-dark);
+            outline: none;
+            transition: 0.3s;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .vol-form input:focus, .vol-form textarea:focus, .vol-form select:focus {
+            border-color: var(--primary);
         }
 
         .vol-form button {
@@ -448,14 +556,276 @@
             padding: 15px;
             border: none;
             border-radius: 10px;
-            font-weight: 800;
+            font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
+            letter-spacing: -0.3px;
         }
 
         .vol-form button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--primary-glow);
+        }
+
+        .icon-box-svg {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-glow);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        /* NOTA MEC Section */
+        .nota-mec-section {
+            background: linear-gradient(135deg, #0a1428 0%, #1a2d5a 100%);
+            padding: 120px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nota-mec-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>');
+            opacity: 0.3;
+        }
+
+        .nota-mec-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nota-mec-text h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -0.8px;
+        }
+
+        .nota-mec-text p {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .nota-mec-badge {
+            display: inline-block;
+            background: rgba(0, 200, 255, 0.2);
+            border: 2px solid #00c8ff;
+            color: #00c8ff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .nota-mec-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 400px;
+        }
+
+        .nota-mec-number {
+            font-size: 12rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 0.9;
+            text-shadow: 0 0 60px rgba(0,212,255,0.3);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo-image {
+            width: 140px;
+            height: 140px;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        .nav-text {
+            display: none;
+        }
+
+        .nav-text-main {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: -0.5px;
+            color: var(--uniso-blue-dark);
+            text-transform: uppercase;
+        }
+
+        .nav-text-sub {
+            font-size: 0.6rem;
+            color: var(--gray);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .virtual-tour-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1f78bf 100%);
+            text-align: center;
+        }
+
+        .tour-content h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 60px;
+            font-weight: 800;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tour-item {
+            background: rgba(255,255,255,0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tour-item:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-5px);
+        }
+
+        .tour-item svg {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            color: white;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+        .tour-item h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+        }
+
+        .tour-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: -0.3px;
+        }
+
+        .tour-button:hover {
+            background: white;
+            color: #1f78bf;
+        }
+
+        .discover-section {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .discover-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .discover-content h2 {
+            font-size: 2.4rem;
+            color: var(--uniso-blue-dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: -0.7px;
+        }
+
+        .discover-content p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .nota-mec-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .nota-mec-text h2 {
+                font-size: 2rem;
+            }
+
+            .nota-mec-number {
+                font-size: 6rem;
+            }
+
+            .nota-mec-section {
+                padding: 80px 20px;
+                min-height: auto;
+            }
+
+            .tour-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .discover-content {
+                padding: 30px 20px;
+            }
+
+            .discover-content h2 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -463,167 +833,243 @@
 <body>
 
     <nav>
-        <a href="index.html" class="logo">conecta<span>.uniso</span></a>
+        <a href="index.html" class="logo">
+            <div class="nav-logo">
+                <img src="logo.webp" alt="UNISO Logo" class="nav-logo-image">
+            </div>
+        </a>
         <div class="nav-links">
-            <a href="#cursos">Trilhas</a>
-            <a href="#turmas">Informações</a>
-            <a href="#voluntariado">Voluntariado</a>
-            <a href="#impacto">O Impacto</a>
-            <a href="https://site-letramento.vercel.app/" class="btn btn-primary" style="padding: 12px 28px;">Acessar
-                Portal</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#formulario" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Quero participar</a>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <span class="badge">Inscrições Abertas • 2026</span>
-            <h1>Conectando Jovens ao <br>Futuro Digital</h1>
-            <p>Capacitação gratuita em tecnologia para jovens que buscam se preparar para o mercado de trabalho. Aprenda
-                as ferramentas essenciais do dia a dia e as novidades da Inteligência Artificial.</p>
-            <div class="hero-buttons">
-                <a href="https://site-letramento.vercel.app/" class="btn btn-primary">Iniciar Minha Jornada Grátis</a>
-                <a href="#turmas" class="btn btn-secondary">Detalhes do Curso</a>
+    <!-- NOTA MÁXIMA NO MEC Section -->
+    <section class="nota-mec-section" id="nota-mec">
+        <div class="nota-mec-content">
+            <div class="nota-mec-text">
+                <span class="nota-mec-badge">Reconhecimento Nacional</span>
+                <h2>Nota Máxima no MEC</h2>
+                <p>A Universidade de Sorocaba é reconhecida pela excelência em educação, alcançando a nota máxima na avaliação do Ministério da Educação.</p>
+                <p>Qualidade acadêmica, infraestrutura moderna e compromisso com a formação de profissionais éticos e competentes.</p>
+            </div>
+            <div class="nota-mec-image">
+                <div class="nota-mec-number">5</div>
             </div>
         </div>
     </section>
 
-    <section class="course-info" id="turmas">
+    <section class="hero" style="padding: 60px 0; background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%); text-align: center;">
+        <div class="container">
+            <span class="badge">Projetos para alunos Uniso</span>
+            <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--uniso-blue-dark); margin-bottom: 30px; letter-spacing: -0.5px;">Aprenda na prática e ajude de verdade</h2>
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn btn-primary">Escolher projeto</a>
+                <a href="#beneficios" class="btn btn-secondary">Quais as vantagens?</a>
+            </div>
+        </div>
+    </section>
+    <!-- DESCUBRA A UNISO Section -->
+    <section class="discover-section" id="sobre">
+        <div class="container">
+            <div class="discover-content">
+                <h2>DESCUBRA O PROJETO</h2>
+                <p>O projeto de voluntariado da Uniso é uma iniciativa que conecta alunos de diversos cursos com a comunidade, oferecendo a oportunidade de aplicar conhecimentos adquiridos em sala de aula em situações reais e práticas.</p>
+                <p><strong>Como funciona:</strong> Alunos voluntários se registram em um dos projetos disponíveis, recebem treinamento específico e começam a atuar de imediato. Você acumula horas de atuação que são certificadas como Atividades Complementares Obrigatórias – essas horas contam integralmente para atender às exigências do seu curso. É aprender na prática, ganhar experiência comprovada e fazer diferença na vida de pessoas ao mesmo tempo.</p>
+            </div>
+        </div>
+    </section>
+    <section class="course-info" id="beneficios">
         <div class="container">
             <div class="info-grid">
                 <div class="info-item">
-                    <span class="info-label">Conteúdo</span>
-                    <p class="info-text">Pacote Office &<br>Introdução à IA</p>
+                    <span class="info-label">Horas Obrigatórias</span>
+                    <p class="info-text">Acumule horas<br>que contam na faculdade</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Horário</span>
-                    <p class="info-text">Terças e Quintas<br>14h às 17h</p>
+                    <span class="info-label">Currículo</span>
+                    <p class="info-text">Mostre que você já<br>sabe fazer na prática</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Local</span>
-                    <p class="info-text">Campus UNISO<br>(Início Abril 2026)</p>
+                    <span class="info-label">Amizades</span>
+                    <p class="info-text">Trabalhe com alunos<br>de outros cursos</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Público</span>
-                    <p class="info-text">20 Jovens<br>Aprendizes</p>
+                    <span class="info-label">Cidadania</span>
+                    <p class="info-text">Ajude a melhorar a<br>nossa Sorocaba</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features" id="cursos">
+    <section class="features" id="projetos">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Capacitação Profissional</span>
-                <h2>Sua Carreira Começa Aqui</h2>
-                <p>Nossas trilhas de aprendizado são projetadas para atender as demandas reais das empresas. Com uma
-                    metodologia prática e focada no essencial, preparamos você para conquistar sua primeira oportunidade
-                    com confiança.</p>
+                <span class="section-label">Onde você quer atuar?</span>
+                <h2>Escolha um projeto abaixo</h2>
+                <p>Clique no projeto que mais combina com o seu curso para saber como ajudar.</p>
             </div>
 
             <div class="grid-features">
-                <div class="feature-card">
-                    <div class="icon-box"
-                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                <div class="feature-card" onclick="selectProject('letramento')">
+                    <span class="project-tag">Tecnologia e TI</span>
+                    <div class="icon-box-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
                     </div>
-                    <h3>Domínio do Pacote Office</h3>
-                    <p>Aprenda a fundamentação necessária em Excel, Word e PowerPoint para se destacar em qualquer
-                        ambiente corporativo.</p>
+                    <h3>Letramento Digital</h3>
+                    <p>Ajude jovens a mexer no Word, Excel e até como usar o ChatGPT de um jeito produtivo.</p>
+                    <div class="more-info">Clique para saber mais →</div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"
-                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                <div class="feature-card" onclick="selectProject('carreira')">
+                    <span class="project-tag">Humanas e Negócios</span>
+                    <div class="icon-box-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>Introdução à IA</h3>
-                    <p>Entenda como a Inteligência Artificial pode facillitar suas tarefas cotidianas e aumentar sua
-                        eficiência profissional.</p>
+                    <h3>Mentoria de Carreira</h3>
+                    <p>Ajude quem está começando a montar um currículo e treine conversas para entrevistas.</p>
+                    <div class="more-info">Clique para saber mais →</div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"
-                        style="width: 40px; height: 40px; background: var(--primary); border-radius: 8px; margin-bottom: 20px;">
+                <div class="feature-card" onclick="selectProject('novo')">
+                    <span class="project-tag">Multidisciplinar</span>
+                    <div class="icon-box-svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
-                    <h3>Certificação Uniso</h3>
-                    <p>Receba um certificado oficial da Uniso ao concluir seu treinamento, adicionando autoridade ao seu
-                        currículo.</p>
+                    <h3>Novas Iniciativas</h3>
+                    <p>Tem uma ideia de como seu curso pode ajudar? Conta pra gente e vamos tirar do papel juntos.</p>
+                    <div class="more-info">Clique para saber mais →</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="impacto">
-        <div class="container">
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Gratuito</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Trilhas Ativas</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Acesso Online</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">Potencial</div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>Pronto para dar o próximo passo?</h2>
-                <p>Junte-se ao conecta.uniso e garanta sua vaga para o ciclo de 2026. A transformação digital começa com
-                    você.</p>
-                <a href="https://site-letramento.vercel.app/" class="btn btn-primary"
-                    style="font-size: 1.2rem; padding: 20px 50px;">Acessar Portal Agora</a>
+                <h2>Faça mais pela sua carreira</h2>
+                <p>Ajudar os outros é o melhor jeito de fixar o que você aprendeu nas aulas.</p>
+                <a href="#formulario" class="btn btn-primary"
+                    style="font-size: 1.2rem; padding: 20px 50px;">Quero me cadastrar agora</a>
             </div>
         </div>
     </section>
 
-    <section class="vol-section" id="voluntariado">
+    <section class="vol-section" id="formulario">
         <div class="container">
             <div class="vol-grid">
                 <div class="vol-info">
-                    <span class="section-label">Oportunidade</span>
-                    <h2>Compartilhe seu conhecimento</h2>
-                    <p>Venha ajudar na formação da nossa próxima turma. Se você domina Pacote Office ou Inteligência
-                        Artificial, sua experiência pode mudar o futuro de 20 jovens aprendizes.</p>
+                    <span class="section-label">Faça sua inscrição</span>
+                    <h2>Vamos começar?</h2>
+                    <p>Deixe seus dados abaixo. Nós vamos te chamar para uma conversa assim que o projeto escolhido começar.</p>
                     <div
-                        style="background: rgba(124, 58, 237, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(124, 58, 237, 0.2);">
-                        <h4 style="margin-bottom: 15px; color: var(--primary);">O que buscamos:</h4>
+                        style="background: #f0f7ff; padding: 30px; border-radius: 20px; border: 1px solid #e0e7ff;">
+                        <h4 style="margin-bottom: 15px; color: var(--primary);">Como funciona?</h4>
                         <ul style="list-style: none; color: var(--gray);">
-                            <li style="margin-bottom: 10px;">• Monitoria em informática básica</li>
-                            <li style="margin-bottom: 10px;">• Apoio técnico em IA</li>
-                            <li style="margin-bottom: 10px;">• Mentoria de carreira</li>
+                            <li style="margin-bottom: 10px;">1. Você faz seu cadastro aqui</li>
+                            <li style="margin-bottom: 10px;">2. Nós olhamos seu curso e semestre</li>
+                            <li style="margin-bottom: 10px;">3. Você recebe um treinamento rápido</li>
+                            <li style="margin-bottom: 10px;">4. Você começa a ajudar e ganha suas horas</li>
                         </ul>
                     </div>
                 </div>
                 <div class="vol-card">
-                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Seja um Voluntário</h3>
-                    <form class="vol-form" action="mailto:enzzogomes40@gmail.com" method="post" enctype="text/plain">
-                        <input type="text" placeholder="Nome Completo" name="nome" required>
-                        <input type="email" placeholder="E-mail de Contato" name="email" required>
-                        <textarea placeholder="Sua experiência..." name="msg" rows="4" required></textarea>
-                        <button type="submit">Enviar Candidatura</button>
+                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Dados do Aluno</h3>
+                    <form class="vol-form" action="mailto:contato@uniso.br" method="post" enctype="text/plain">
+                        <input type="text" placeholder="Seu Nome Completo" name="nome" required>
+                        <input type="text" placeholder="Seu Curso e em qual semestre está" name="curso" required>
+                        <input type="email" placeholder="Seu E-mail da Uniso" name="email" required>
+                        <select name="projeto_interesse" required>
+                            <option value="" disabled selected>Qual projeto te interessa?</option>
+                            <option value="letramento">Letramento Digital</option>
+                            <option value="carreira">Mentoria de Carreira</option>
+                            <option value="novo">Novas Iniciativas</option>
+                        </select>
+                        <textarea placeholder="Conte um pouco sobre por que você quer participar..." name="msg" rows="4" required></textarea>
+                        <button type="submit">Finalizar meu cadastro</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer style="background: linear-gradient(135deg, #1e3a8a 0%, #1f78bf 100%); padding: 60px 0 30px; text-align: left; border-top: none;">
         <div class="container">
-            <div class="logo">conecta<span>.uniso</span></div>
-            <p>© 2026 conecta.uniso - Uniso e Você, transformando o futuro.</p>
-            <p style="margin-top: 20px;">
-                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Suporte</a> •
-                <a href="#voluntariado" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Seja
-                    Voluntário</a>
-            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px;">
+                <!-- Contatos -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+                        <svg style="width: 24px; height: 24px; color: white;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: 700;">Campus Cidade Universitária Prof. Aldo Vannucchi</h3>
+                    </div>
+                    <p style="color: #e2e8f0; margin-bottom: 8px; font-size: 0.95rem;">Rod. Raposo Tavares, km 92,5</p>
+                    <p style="color: #e2e8f0; font-size: 0.95rem;">Vila Artura, Sorocaba – SP, 18023-000</p>
+                </div>
+
+                <!-- Campus Trujillo -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+                        <svg style="width: 24px; height: 24px; color: white;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                        <h3 style="color: white; font-size: 1.1rem; font-weight: 700;">Campus Trujillo</h3>
+                    </div>
+                    <p style="color: #e2e8f0; margin-bottom: 8px; font-size: 0.95rem;">Av. Gen. Osório, 35</p>
+                    <p style="color: #e2e8f0; font-size: 0.95rem;">Vila Trujillo, Sorocaba – SP, 18060-000</p>
+                </div>
+
+
+            </div>
+
+            <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.2); margin-bottom: 40px;">
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+                <div>
+                    <h3 style="color: #ffd700; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px;">Cursos</h3>
+                    <ul style="list-style: none; color: white; font-size: 0.9rem;">
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Graduação Presencial</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Graduação EAD</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">MBA e Especialização</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Mestrados e Doutorados</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="color: #ffd700; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px;">Bolsas e Financiamentos</h3>
+                    <ul style="list-style: none; color: white; font-size: 0.9rem;">
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Bolsas e Financiamentos</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">ICT UNISOTECH</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="color: #ffd700; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px;">Institucional</h3>
+                    <ul style="list-style: none; color: white; font-size: 0.9rem;">
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Sobre</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">História</a></li>
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Missão</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="color: #ffd700; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px;">Pesquisa</h3>
+                    <ul style="list-style: none; color: white; font-size: 0.9rem;">
+                        <li style="margin-bottom: 8px;"><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">IC – Iniciação Científica</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none; transition: 0.3s;">Observatório de Desenvolvimento</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
+
+            <div style="text-align: center; color: #e2e8f0; font-size: 0.9rem;">
+                <p>© 2026 Universidade de Sorocaba - Uniso. Todos os direitos reservados.</p>
+                <p style="margin-top: 10px;">Desenvolvido com 💙 para a comunidade académica</p>
+            </div>
         </div>
     </footer>
 
@@ -635,6 +1081,14 @@
                 if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         });
+
+        function selectProject(projectId) {
+            const select = document.querySelector('select[name="projeto_interesse"]');
+            if (select) {
+                select.value = projectId;
+                document.querySelector('#formulario').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
     </script>
 </body>
 
