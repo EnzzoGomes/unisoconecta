@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do Voluntariado - conecta.uniso</title>
+    <title>Projetos Voluntários - Uniso</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -58,7 +58,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 3px solid var(--primary);
+            border-bottom: 2px solid #edf2f7;
             position: sticky;
             top: 0;
             background: #ffffff;
@@ -121,7 +121,7 @@
         }
 
         .badge {
-            background: rgba(0, 74, 153, 0.1);
+            background: #f0f7ff;
             color: var(--primary);
             padding: 10px 20px;
             border-radius: 50px;
@@ -129,7 +129,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border: 1px solid rgba(0, 74, 146, 0.2);
+            border: 1px solid #e0e7ff;
             margin-bottom: 30px;
             display: inline-block;
         }
@@ -146,7 +146,7 @@
 
         .hero p {
             font-size: 1.15rem;
-            color: var(--gray);
+            color: var(--text-main);
             max-width: 700px;
             margin: 0 auto 50px;
             line-height: 1.6;
@@ -210,6 +210,7 @@
             flex-direction: column;
             justify-content: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            cursor: default;
         }
 
         .info-item:hover {
@@ -282,16 +283,29 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            text-align: left;
         }
 
         .feature-card:hover {
             border-color: var(--primary);
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
         }
 
         .feature-card h3 {
             color: var(--uniso-blue-dark);
             margin-bottom: 15px;
+        }
+
+        .feature-card .more-info {
+            margin-top: 20px;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .project-tag {
@@ -331,7 +345,7 @@
 
         .cta-section {
             padding: 120px 40px;
-            background: linear-gradient(rgba(0, 45, 90, 0.9), rgba(0, 45, 90, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+            background: linear-gradient(rgba(0, 45, 90, 0.85), rgba(0, 45, 90, 0.85)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
             border-radius: 40px;
@@ -497,23 +511,23 @@
 <body>
 
     <nav>
-        <a href="index.html" class="logo">conecta<span>.uniso</span></a>
+        <a href="index.html" class="logo">Uniso<span>Conecta</span></a>
         <div class="nav-links">
-            <a href="#projetos">Projetos Abertos</a>
-            <a href="#beneficios">Benefícios</a>
+            <a href="#projetos">Onde ajudar</a>
+            <a href="#beneficios">Vantagens</a>
             <a href="#impacto">O Impacto</a>
-            <a href="#formulario" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Seja Voluntário</a>
+            <a href="#formulario" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Quero participar</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <span class="badge">Plataforma de Extensão Universitária</span>
-            <h1>Transforme Teoria em <br>Impacto Real</h1>
-            <p>Você é aluno da Uniso? Utilize o conhecimento do seu curso para transformar a comunidade. Ganhe horas complementares (ACO), experiência prática e ajude quem mais precisa.</p>
+            <span class="badge">Projetos para alunos Uniso</span>
+            <h1>Aprenda na prática e <br>ajude de verdade</h1>
+            <p>Use o que você estuda na aula para ajudar a comunidade. É o jeito mais fácil de ganhar suas horas extras (ACO) e ainda melhorar seu currículo.</p>
             <div class="hero-buttons">
-                <a href="#projetos" class="btn btn-primary">Ver Projetos Abertos</a>
-                <a href="#beneficios" class="btn btn-secondary">Por que participar?</a>
+                <a href="#projetos" class="btn btn-primary">Escolher projeto</a>
+                <a href="#beneficios" class="btn btn-secondary">Quais as vantagens?</a>
             </div>
         </div>
     </section>
@@ -522,20 +536,20 @@
         <div class="container">
             <div class="info-grid">
                 <div class="info-item">
-                    <span class="info-label">Horas ACO</span>
-                    <p class="info-text">Certificado oficial para<br>atividades complementares</p>
+                    <span class="info-label">Horas extras</span>
+                    <p class="info-text">Ganhe horas ACO<br>para a faculdade</p>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Currículo</span>
-                    <p class="info-text">Experiência prática real<br>em projetos sociais</p>
+                    <p class="info-text">Mostre que você já<br>sabe fazer na prática</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Networking</span>
-                    <p class="info-text">Conecte-se com alunos<br>de outros cursos</p>
+                    <span class="info-label">Amizades</span>
+                    <p class="info-text">Trabalhe com alunos<br>de outros cursos</p>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Propósito</span>
-                    <p class="info-text">Ajude a transformar o<br>futuro da nossa região</p>
+                    <span class="info-label">Cidadania</span>
+                    <p class="info-text">Ajude a melhorar a<br>nossa Sorocaba</p>
                 </div>
             </div>
         </div>
@@ -544,35 +558,38 @@
     <section class="features" id="projetos">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Vagas Disponíveis</span>
-                <h2>Projetos Aguardando Você</h2>
-                <p>Diversos cursos da Uniso já possuem frentes de atuação social. Escolha o que mais combina com sua graduação.</p>
+                <span class="section-label">Onde você quer atuar?</span>
+                <h2>Escolha um projeto abaixo</h2>
+                <p>Clique no projeto que mais combina com o seu curso para saber como ajudar.</p>
             </div>
 
             <div class="grid-features">
-                <div class="feature-card">
-                    <span class="project-tag">TI & Computação</span>
+                <div class="feature-card" onclick="selectProject('letramento')">
+                    <span class="project-tag">Tecnologia e TI</span>
                     <div class="icon-box-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
                     </div>
-                    <h3>Letramento Digital</h3>
-                    <p>Alunos de ADS, Ciência da Computação e Engenharia. Ajude jovens a dominar o Pacote Office e ferramentas básicas de IA.</p>
+                    <h3>Ensinar Informática</h3>
+                    <p>Ajude jovens a mexer no Word, Excel e até como usar o ChatGPT de um jeito produtivo.</p>
+                    <div class="more-info">Clique para saber mais →</div>
                 </div>
-                <div class="feature-card">
-                    <span class="project-tag">Humanas & Negócios</span>
+                <div class="feature-card" onclick="selectProject('carreira')">
+                    <span class="project-tag">Gestão e Pessoas</span>
                     <div class="icon-box-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>Mentoria de Carreira</h3>
-                    <p>Alunos de Adm, RH e Psicologia. Auxilie na elaboração de currículos e simulação de entrevistas para o primeiro emprego.</p>
+                    <h3>Dicas para Emprego</h3>
+                    <p>Ajude quem está começando a montar um currículo e treine conversas para entrevistas.</p>
+                    <div class="more-info">Clique para saber mais →</div>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" onclick="selectProject('novo')">
                     <span class="project-tag">Multidisciplinar</span>
                     <div class="icon-box-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
-                    <h3>Novas Iniciativas</h3>
-                    <p>Seu curso ainda não está aqui? Traga sua ideia de projeto social para a Uniso e ajude a estruturar novas formas de ajudar.</p>
+                    <h3>Criar novo projeto</h3>
+                    <p>Tem uma ideia de como seu curso pode ajudar? Conta pra gente e vamos tirar do papel juntos.</p>
+                    <div class="more-info">Clique para saber mais →</div>
                 </div>
             </div>
         </div>
@@ -582,20 +599,20 @@
         <div class="container">
             <div class="stats">
                 <div class="stat-item">
-                    <div class="stat-number">+50</div>
-                    <div class="stat-label">Horas ACO Estimadas</div>
+                    <div class="stat-number">50h</div>
+                    <div class="stat-label">Horas ACO</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">2026</div>
-                    <div class="stat-label">Próximo Ciclo</div>
+                    <div class="stat-number">Março</div>
+                    <div class="stat-label">Início das Turmas</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">Hub</div>
                     <div class="stat-label">Multi-cursos</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">Uniso</div>
-                    <div class="stat-label">Você e a Comunidade</div>
+                    <div class="stat-number">Perto</div>
+                    <div class="stat-label">No Campus Uniso</div>
                 </div>
             </div>
         </div>
@@ -604,10 +621,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>Sua jornada universitária além da sala de aula</h2>
-                <p>O conecta.uniso é a ponte entre o seu talento e quem precisa de uma oportunidade para crescer.</p>
+                <h2>Faça mais pela sua carreira</h2>
+                <p>Ajudar os outros é o melhor jeito de fixar o que você aprendeu nas aulas.</p>
                 <a href="#formulario" class="btn btn-primary"
-                    style="font-size: 1.2rem; padding: 20px 50px;">Inscrever-se no Banco de Voluntários</a>
+                    style="font-size: 1.2rem; padding: 20px 50px;">Quero me cadastrar agora</a>
             </div>
         </div>
     </section>
@@ -616,34 +633,34 @@
         <div class="container">
             <div class="vol-grid">
                 <div class="vol-info">
-                    <span class="section-label">Oportunidade</span>
-                    <h2>Seja protagonista da mudança</h2>
-                    <p>Preencha seus dados e selecione sua área de interesse. Entraremos em contato assim que um projeto compatível com seu curso e disponibilidade for iniciado.</p>
+                    <span class="section-label">Faça sua inscrição</span>
+                    <h2>Vamos começar?</h2>
+                    <p>Deixe seus dados abaixo. Nós vamos te chamar para uma conversa assim que o projeto escolhido começar.</p>
                     <div
                         style="background: #f0f7ff; padding: 30px; border-radius: 20px; border: 1px solid #e0e7ff;">
                         <h4 style="margin-bottom: 15px; color: var(--primary);">Como funciona?</h4>
                         <ul style="list-style: none; color: var(--gray);">
-                            <li style="margin-bottom: 10px;">1. Você se cadastra no portal</li>
-                            <li style="margin-bottom: 10px;">2. Avaliamos seu curso e semestre</li>
-                            <li style="margin-bottom: 10px;">3. Você participa do treinamento</li>
-                            <li style="margin-bottom: 10px;">4. Inicia as atividades e ganha suas horas</li>
+                            <li style="margin-bottom: 10px;">1. Você faz seu cadastro aqui</li>
+                            <li style="margin-bottom: 10px;">2. Nós olhamos seu curso e semestre</li>
+                            <li style="margin-bottom: 10px;">3. Você recebe um treinamento rápido</li>
+                            <li style="margin-bottom: 10px;">4. Você começa a ajudar e ganha suas horas</li>
                         </ul>
                     </div>
                 </div>
                 <div class="vol-card">
-                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Cadastro de Aluno</h3>
+                    <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Dados do Aluno</h3>
                     <form class="vol-form" action="mailto:contato@uniso.br" method="post" enctype="text/plain">
-                        <input type="text" placeholder="Nome Completo" name="nome" required>
-                        <input type="text" placeholder="Seu Curso e Semestre" name="curso" required>
-                        <input type="email" placeholder="E-mail Institucional" name="email" required>
+                        <input type="text" placeholder="Seu Nome Completo" name="nome" required>
+                        <input type="text" placeholder="Seu Curso e em qual semestre está" name="curso" required>
+                        <input type="email" placeholder="Seu E-mail da Uniso" name="email" required>
                         <select name="projeto_interesse" required>
-                            <option value="" disabled selected>Selecione o Projeto</option>
-                            <option value="letramento">Letramento Digital</option>
-                            <option value="carreira">Mentoria de Carreira</option>
-                            <option value="novo">Propor Novo Projeto</option>
+                            <option value="" disabled selected>Qual projeto te interessa?</option>
+                            <option value="letramento">Ensinar Informática</option>
+                            <option value="carreira">Dicas para Emprego</option>
+                            <option value="novo">Outra ideia / Criar projeto</option>
                         </select>
-                        <textarea placeholder="Por que você quer ser voluntário?" name="msg" rows="4" required></textarea>
-                        <button type="submit">Enviar Cadastro</button>
+                        <textarea placeholder="Conte um pouco sobre por que você quer participar..." name="msg" rows="4" required></textarea>
+                        <button type="submit">Finalizar meu cadastro</button>
                     </form>
                 </div>
             </div>
@@ -652,7 +669,7 @@
 
     <footer>
         <div class="container">
-            <div class="logo">conecta<span>.uniso</span></div>
+            <div class="logo">Uniso<span>Conecta</span></div>
             <p>© 2026 conecta.uniso - Uniso e Você, transformando o futuro.</p>
             <p style="margin-top: 20px;">
                 <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Suporte</a> •
@@ -670,6 +687,14 @@
                 if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         });
+
+        function selectProject(projectId) {
+            const select = document.querySelector('select[name="projeto_interesse"]');
+            if (select) {
+                select.value = projectId;
+                document.querySelector('#formulario').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
     </script>
 </body>
 
