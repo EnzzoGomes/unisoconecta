@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #000000;
-            --card-bg: #0a0a0a;
-            --card-border: #1a1a1a;
-            --primary: #0693e3;
-            --primary-glow: rgba(6, 147, 227, 0.3);
-            --white: #ffffff;
-            --gray: #abb8c3;
-            --text-muted: #666666;
+            --bg: #ffffff;
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --primary: #004a92; /* Azul Institucional Uniso */
+            --primary-glow: rgba(0, 74, 146, 0.1);
+            --text-main: #1f2937;
+            --gray: #4b5563;
+            --text-muted: #9ca3af;
             --gradient-midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --uniso-blue-dark: #002d5a;
         }
 
         * {
@@ -28,7 +29,7 @@
 
         body {
             background-color: var(--bg);
-            color: var(--white);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -57,11 +58,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid var(--card-border);
+            border-bottom: 3px solid var(--primary);
             position: sticky;
             top: 0;
-            background: rgba(3, 3, 3, 0.8);
-            backdrop-filter: blur(12px);
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             z-index: 1000;
             padding: 0 5%;
         }
@@ -69,7 +70,7 @@
         .logo {
             font-weight: 800;
             font-size: 1.4rem;
-            color: var(--white);
+            color: var(--uniso-blue-dark);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -79,9 +80,6 @@
 
         .logo span {
             color: var(--primary);
-            background: var(--gradient-midnight);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .nav-links {
@@ -91,7 +89,7 @@
         }
 
         .nav-links a {
-            color: var(--gray);
+            color: var(--uniso-blue-dark);
             text-decoration: none;
             font-weight: 500;
             transition: 0.3s;
@@ -105,7 +103,7 @@
         .hero {
             padding: 120px 0 80px;
             text-align: center;
-            background: radial-gradient(circle at top, #020381 0%, #000000 70%);
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
         }
@@ -131,22 +129,9 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border: 1px solid var(--primary);
+            border: 1px solid rgba(0, 74, 146, 0.2);
             margin-bottom: 30px;
             display: inline-block;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 10px var(--primary-glow);
-            }
-
-            50% {
-                box-shadow: 0 0 20px var(--primary);
-            }
         }
 
         h1 {
@@ -154,10 +139,7 @@
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 25px;
-            background: linear-gradient(to bottom, #fff 40%, #a3a3a3);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--uniso-blue-dark);
             position: relative;
             z-index: 1;
         }
@@ -196,13 +178,13 @@
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid #333;
-            color: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         .btn-secondary:hover {
             border-color: var(--primary);
-            background: rgba(0, 74, 153, 0.05);
+            background: var(--primary-glow);
         }
 
         .course-info {
@@ -219,14 +201,20 @@
 
         .info-item {
             text-align: center;
-            background: rgba(255, 255, 255, 0.02);
+            background: #ffffff;
             padding: 30px;
             border-radius: 16px;
-            border: 1px solid var(--card-border);
+            border: 1px solid #edf2f7;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         .info-label {
@@ -241,7 +229,7 @@
 
         .info-text {
             font-size: 1rem;
-            color: var(--white);
+            color: var(--uniso-blue-dark);
             font-weight: 600;
         }
 
@@ -269,6 +257,7 @@
             font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 20px;
             font-weight: 800;
+            color: var(--uniso-blue-dark);
         }
 
         .section-header p {
@@ -285,19 +274,35 @@
         }
 
         .feature-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: #ffffff;
             padding: 45px 35px;
             border-radius: 24px;
-            border: 1px solid var(--card-border);
+            border: 1px solid #edf2f7;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .feature-card:hover {
-            border-color: rgba(0, 74, 153, 0.5);
-            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--primary);
             transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--uniso-blue-dark);
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f0f7ff;
+            color: var(--primary);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         .stats {
@@ -314,10 +319,7 @@
         .stat-number {
             font-size: 3.5rem;
             font-weight: 800;
-            background: var(--gradient-midnight);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary);
         }
 
         .stat-label {
@@ -329,7 +331,7 @@
 
         .cta-section {
             padding: 120px 40px;
-            background: linear-gradient(rgba(3, 3, 3, 0.85), rgba(3, 3, 3, 0.85)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
+            background: linear-gradient(rgba(0, 45, 90, 0.9), rgba(0, 45, 90, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
             border-radius: 40px;
@@ -350,19 +352,20 @@
             font-size: clamp(2rem, 6vw, 3.5rem);
             margin-bottom: 25px;
             font-weight: 800;
+            color: white;
         }
 
         .cta-box p {
             font-size: 1.2rem;
-            color: var(--gray);
+            color: #e2e8f0;
             margin-bottom: 40px;
         }
 
         footer {
             padding: 80px 0 40px;
-            border-top: 1px solid var(--card-border);
+            border-top: 1px solid #edf2f7;
             text-align: center;
-            background: var(--bg);
+            background: #f9fafb;
         }
 
         footer .logo {
@@ -419,6 +422,7 @@
         .vol-info h2 {
             font-size: 3rem;
             margin-bottom: 25px;
+            color: var(--uniso-blue-dark);
             font-weight: 800;
         }
 
@@ -429,10 +433,11 @@
         }
 
         .vol-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: #ffffff;
             padding: 40px;
             border-radius: 24px;
-            border: 1px solid var(--card-border);
+            border: 1px solid #edf2f7;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .vol-form {
@@ -442,17 +447,20 @@
         }
 
         .vol-form input,
-        .vol-form textarea {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid var(--card-border);
+        .vol-form textarea,
+        .vol-form select {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
             padding: 16px;
             border-radius: 12px;
-            color: white;
+            color: var(--uniso-blue-dark);
             outline: none;
             transition: 0.3s;
+            width: 100%;
+            font-size: 1rem;
         }
 
-        .vol-form input:focus, .vol-form textarea:focus {
+        .vol-form input:focus, .vol-form textarea:focus, .vol-form select:focus {
             border-color: var(--primary);
         }
 
@@ -475,7 +483,7 @@
         .icon-box-svg {
             width: 48px;
             height: 48px;
-            background: rgba(6, 147, 227, 0.1);
+            background: var(--primary-glow);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -543,6 +551,7 @@
 
             <div class="grid-features">
                 <div class="feature-card">
+                    <span class="project-tag">TI & Computação</span>
                     <div class="icon-box-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
                     </div>
@@ -550,6 +559,7 @@
                     <p>Alunos de ADS, Ciência da Computação e Engenharia. Ajude jovens a dominar o Pacote Office e ferramentas básicas de IA.</p>
                 </div>
                 <div class="feature-card">
+                    <span class="project-tag">Humanas & Negócios</span>
                     <div class="icon-box-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
@@ -557,6 +567,7 @@
                     <p>Alunos de Adm, RH e Psicologia. Auxilie na elaboração de currículos e simulação de entrevistas para o primeiro emprego.</p>
                 </div>
                 <div class="feature-card">
+                    <span class="project-tag">Multidisciplinar</span>
                     <div class="icon-box-svg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
@@ -609,7 +620,7 @@
                     <h2>Seja protagonista da mudança</h2>
                     <p>Preencha seus dados e selecione sua área de interesse. Entraremos em contato assim que um projeto compatível com seu curso e disponibilidade for iniciado.</p>
                     <div
-                        style="background: rgba(6, 147, 227, 0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(6, 147, 227, 0.2);">
+                        style="background: #f0f7ff; padding: 30px; border-radius: 20px; border: 1px solid #e0e7ff;">
                         <h4 style="margin-bottom: 15px; color: var(--primary);">Como funciona?</h4>
                         <ul style="list-style: none; color: var(--gray);">
                             <li style="margin-bottom: 10px;">1. Você se cadastra no portal</li>
@@ -625,6 +636,12 @@
                         <input type="text" placeholder="Nome Completo" name="nome" required>
                         <input type="text" placeholder="Seu Curso e Semestre" name="curso" required>
                         <input type="email" placeholder="E-mail Institucional" name="email" required>
+                        <select name="projeto_interesse" required>
+                            <option value="" disabled selected>Selecione o Projeto</option>
+                            <option value="letramento">Letramento Digital</option>
+                            <option value="carreira">Mentoria de Carreira</option>
+                            <option value="novo">Propor Novo Projeto</option>
+                        </select>
                         <textarea placeholder="Por que você quer ser voluntário?" name="msg" rows="4" required></textarea>
                         <button type="submit">Enviar Cadastro</button>
                     </form>
